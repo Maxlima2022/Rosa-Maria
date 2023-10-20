@@ -129,8 +129,30 @@ h4{
     color: aliceblue;
 }
 
-           /* Estilize o botão com CSS */
-    .my-button {
+
+ .container {
+    position: relative;
+    width: 300px; /* Largura desejada do container */
+    height: 500px; /* Altura desejada do container */
+    text-align: center; /* Centraliza horizontalmente */
+}
+
+.image {
+    max-width: 100%; /* A imagem não será maior que o container */
+    max-height: 100%; /* A imagem não será maior que o container */
+    position: absolute;
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Reposiciona a imagem no centro */
+}
+
+     @media screen and (max-width: 768px) {
+    .container {
+        /* Estilos específicos para tamanhos de tela menores, como largura de 768px */
+    }
+}
+       /* Estilize o botão com CSS */
+        .my-button {
             background-color: #e96497; /* Cor de fundo do botão */
             color: #fff; /* Cor do texto do botão */
             padding: 10px 20px; /* Preenchimento do botão */
@@ -152,17 +174,22 @@ h4{
   
     
        
-    <img class="logo" src="logo.png" alt="Logo da Sua Empresa" alt="Logo da Sua Empresa" alt="Imagem PNG Aumentada" class="aumentada"> 
+    <img class="logo" src="logo.png" alt="Logo da Sua Empresa" alt="Logo da Sua Empresa" alt="Imagem PNG Aumentada" class="aumentada"  width: 90vw;   height: 90vh;> 
     <!-- Adicione o caminho para o seu logotipo -->
-    <r></r><r></r>
+
     <p></p>
  
     
    <h4>CARDÁPIO</h4>
     
   </center>
-     <button class="my-button">
+   <button class="my-button">
     <a href="rosamaria.html"> <h2>VOLTAR</h2></a></button>
+   
+<div class="container">
+        <img class="image" src="LA CARTE02.jpg" alt="Imagem Centralizada">
+    </div>
+    
     <footer>
          <img src="ZAP.png" alt="whatsapp" width="50px">
         
