@@ -128,6 +128,22 @@ a {
 h4{
     color: aliceblue;
 }
+
+        .container {
+    position: relative;
+    width: 800px; /* Largura desejada do container */
+    height: 1000px; /* Altura desejada do container */
+    text-align: center; /* Centraliza horizontalmente */
+}
+
+.image {
+    max-width: 100%; /* A imagem não será maior que o container */
+    max-height: 100%; /* A imagem não será maior que o container */
+    position: absolute;
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Reposiciona a imagem no centro */
+}
         
     </style>
     
