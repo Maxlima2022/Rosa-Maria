@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="LOGO.png" type="image/png"> <!-- Substitua pelo caminho do seu ícone -->
     <title>CARDÁPIO ROSA MARIA</title>
+  
     <style>
         body {
 
-            background-image: url('fundo.jpg');
+            background-image: url('fundo7.jpg');
                background-size: cover; /* Ajusta o tamanho da imagem para cobrir o contêiner */
     background-position: center; /* Centraliza a imagem no contêiner */
     background-repeat: no-repeat; /* Evita a repetição da imagem */
+             background-attachment: fixed; /* Fixa a imagem no plano de fundo (opcional) */
     /* Outros estilos do contêiner aqui */
-
+ 
             font-family: Arial, sans-serif;
           
             margin: 0;
@@ -31,7 +33,7 @@
             max-width: 1000px;
             margin: 16px auto;
             padding: 16px;
-            background-color: #f5c8e0;
+            background-color: #f076ab;
        
             border-radius: 19px;
             box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
@@ -42,7 +44,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid #ccc;
+            border-bottom: 1px solid #e45c5c;
             padding: 10px 0;
         }
 
@@ -74,7 +76,7 @@
         }
 
         footer {
-            background-color: #838080;
+            background-color: #06090a;
             color: #fff;
             text-align: center;
             padding: 10px;
@@ -95,9 +97,15 @@ a {
         }
 
 
+ @media (max-width: 768px) {
+  /* Estilos para telas menores que 768px de largura */
+}
+
+@media (min-width: 768px) {
+  /* Estilos para telas maiores ou iguais a 768px de largura */
+}
+
  
-  /* Estilos para tornar a página responsiva */
-  @media (max-width: 768px) {
             .logo {
                 max-width: 100px;
             }
@@ -114,8 +122,8 @@ a {
 
         /* Estilo para a imagem aumentada */
 .aumentada {
-  width: 800px; /* Largura desejada */
-  height: 1300px; /* Altura desejada */
+  width: 1000px; /* Largura desejada */
+  height: 2100px; /* Altura desejada */
 }
 
 /* Estilo para o contêiner da imagem */
@@ -128,7 +136,7 @@ h4{
     color: aliceblue;
 }
    .container {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.6) 0%, rgba(0, 0, 0, 0) 100%), #3498db; /* Gradiente com brilho e cor de fundo */
+    background: linear-gradient(135deg, rgba(192, 192, 192, 0.6) 0%, rgba(0, 0, 0, 0) 100%), #3498db; /* Gradiente com brilho e cor de fundo */
     padding: 29px;
 }
 
@@ -144,7 +152,7 @@ h4{
         }
 
 .my-button {
-                background-color: #e96497; /* Cor de fundo do botão */
+                background-color: #66e690; /* Cor de fundo do botão */
                 color: #fff; /* Cor do texto do botão */
                 padding: 10px 20px; /* Preenchimento do botão */
                 border: none; /* Remova a borda do botão */
@@ -152,196 +160,267 @@ h4{
                 cursor: pointer; /* Transforme o cursor em uma mão ao passar sobre o botão */
             }
      
-    </style>
+            .highlight {
+            animation: blink 1s linear infinite;
+            color: rgb(219, 25, 25); /* Cor vermelha para a palavra destacada */
+        }
+
+        @keyframes blink {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            
+                
+
+            }
+
+        }
+
+            /* Oculta o elemento de áudio */
+            audio {
+            display: none;
+        }
+ .relogio {
+            font-size: 22px;
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+            border: #ccc;
+        }
     
+    </style>
+    <script>
+        function moverConteudo() {
+            const body = document.querySelector("body");
+            const novoLocal = document.getElementById("novoLocal");
+            novoLocal.appendChild(body);
+        }
+    </script>
+         <script>
+        function atualizarRelogio() {
+            const relogio = new Date();
+            const hora = relogio.getHours();
+            const minuto = relogio.getMinutes();
+            const segundo = relogio.getSeconds();
+            const dia = relogio.getDate();
+            const mes = relogio.getMonth() + 1; // Lembrando que o mês começa em 0 (janeiro) no JavaScript
+            const ano = relogio.getFullYear();
+
+            const dataFormatada = `${dia}/${mes}/${ano}`;
+            const horaFormatada = `${hora.toString().padStart(2, '0')}:${minuto.toString().padStart(2, '0')}:${segundo.toString().padStart(2, '0')}`;
+
+            const relogioElement = document.getElementById("relogio");
+            relogioElement.textContent = `${dataFormatada} ${horaFormatada}`;
+        }
+
+        setInterval(atualizarRelogio, 1000); // Atualiza a cada segundo
+        atualizarRelogio(); // Atualiza imediatamente ao carregar a página
+    </script>
 </head>
 <body>
+ <div class="relogio" id="relogio">Carregando...</div>
  
-    
-   
     <header>
       
        
-  <center>
-   
-  
-            <img class="center-image" src="logo.png" alt="Imagem no Centro">
-<button class="my-button">   <a href="confira.html">   <span>ACESSE AQUI<p>NOSSO<p>AMBIENTE DO RESTAURANTE</p></span></a></button>
-      
+        <center>
+          
+         
+                   <img class="center-image" src="logo.png" alt="Imagem no Centro">
+        </center>
+                  <center>
+       <strong> <span class="highlight">ESTACIONAMENTO GRATUITO PARA CLIENTES</span> </strong>
+         </center>   
+       <button class="my-button">   <a href="confira.html">  
+          
+           
+         <strong> <span>ACESSE AQUI<p>NOSSO<p>AMBIENTE DO RESTAURANTE</p></span></a></button></strong>
+             
+         
+          
+       <p></p><p></p>
+          
+        
+           </header> <a href="menu.html">
+            <div class="container">
+           <div class="product">
+               <img src="menu.webp" alt="Produto 1">
+               <div class="product-details">
+                   <h2>MENU COMPLETO</h2>
+                
+               </div></div></div></a>
        
-    
-<h4>CARDÁPIO DIGITAL</h4>
-  </center>
-    </header> <a href="menu.html">
-     <div class="container">
-    <div class="product">
-        <img src="menu.webp" alt="Produto 1">
-        <div class="product-details">
-            <h2>MENU COMPLETO</h2>
-         
-        </div></div></div></a>
-
-    <a href="pratosdia.html">
-    <div class="container">
-        <div class="product">
-            <img src="1.1.jpg" alt="Produto 1">
-            <div class="product-details">
-                <h2>PRATOS A LA CARTE</h2>
-              
-               
-            </div>
-        </div>
-    
-   
-   
-  <!-- Adicione mais produtos conforme necessário -->
-               
-            </div>
-            
-        </div>
-    </a>
-        <a href="bebidas.html">
-        <div class="container">
-
-        <div class="product">
-            <img src="BEBIDAS.jpg" alt="Produto 1">
-            <div class="product-details">
-                <h2>BEBIDAS</h2>
-            
-         
-            </div>
-        
-        </div>
-        </div>
-        <!-- Adicione mais produtos conforme necessário -->
-
-    </div>
-        </a>
-        <a href="dodia.html">
-    <div class="container">
-    <div class="product">
-        <img src="PRATOS DO DIA.jpg" alt="Produto 1">
-        <div class="product-details">
-            <h2>PRATOS DO DIA</h2>
-        
-         
-        </div>
-        </div>
-    </div>
-    </div>
-        </a>
-        <a href="cerveja.html
-        ">
-    <div class="container">
-    <div class="product">
-        <img src="CERVEJAS.jpg" alt="Produto 1">
-        <div class="product-details">
-            <h2>CERVEJAS</h2>
-        
+           <a href="pratosdia.html">
+           <div class="container">
+               <div class="product">
+                   <img src="1.1.jpg" alt="Produto 1">
+                   <div class="product-details">
+                       <h2>PRATOS A LA CARTE</h2>
+                     
+                      
+                   </div>
+               </div>
            
           
-        </div>
-
-        </div>
-    </div>
-    </div>
-        </a>
-        <a href="drinks.html
-        ">
-    <div class="container">
-        <div class="product">
-            <img src="DRINKS.jpg" alt="Produto 1">
-            <div class="product-details">
-                <h2>DRINKS</h2>
-            
-         
-            </div>
-    </div></div> </div>
-        </a>
-        <a href="porcoes.html
-        ">
-    
-    <div class="container">
-    <div class="product">
-        <img src="PORÇÕES.jpg" alt="Produto 1">
-        <div class="product-details">
-            <h2>PORÇÕES</h2>
-        
-      
-        </div>
-        </div>
-    </div>
-        </div>
-        </div>
-
-        </a>
-        <a href="whisky.html
-        ">
-        <div class="container">
-    <div class="product">
-        <img src="WHISKY.jpg" alt="Produto 1">
-        <div class="product-details">
-            <h2>WHISKY'S</h2>
-        
-        </div>
-        </div>
-    
-    </div>
-        </div>  
-        
-        </div>
-        </a> <a href="caipirinha.html
-        ">
-        <div class="container">
-    <div class="product">
-        <img src="CAIPIRINHA.jpg" alt="Produto 1">
-        <div class="product-details">
-            <h2>CAIPIRINHAS</h2>
+          
+         <!-- Adicione mais produtos conforme necessário -->
+                      
+                   </div>
+                   
+               </div>
+           </a>
+               <a href="bebidas.html">
+               <div class="container">
        
-        </div>
-        </div></div></div></div>
-    <a href="sobremesa.html ">
-            <div class="container">
-    <div class="product">
-        <img src="sob.jpg" alt="Produto 1">
-        <div class="product-details">
-            <h2>SOBREMESA</h2>
-         
-        </div> 
-        </div>
-    </a>
-        </div>
-        </div>
-        </div>
-       <a href="salgado.html ">
-            <div class="container">
-    <div class="product">
-        <img src="salgado.jpg" alt="Produto 1">
-        <div class="product-details">
-            <h2>SALGADOS</h2>
-         
-        </div> 
-      </div>
-       </a>
-        
-        </div>
-    
-    </div>
-        </div>
-        </a>
-    <footer>
-<h5>Acesse Nossas Redes Sociais<p>E faça seu pedido</p></h5>
-         <a href="https://wa.me/5511985403062?text=Ol%C3%A1%21+Gostaria+de+fazer+um+pedido. "> <img src="ZAP.png" alt="whatsapp" width="50px"></a>
-        
-        <r><r></r>  
-       <a href="https://www.instagram.com/rosamaria_restaurante/ ">  <img src="instagram.png" alt="instagram" width="50px"></a>
-           <a href="https://www.ifood.com.br/delivery/sao-paulo-sp/rosa-maria-restaurante-carandiru/722eb1ec-0b73-4105-9841-894793f905bd?utm_medium=share">  
-               <img src="ifood-logo.svg" alt="ifood" width="50px"></a>
-        <r></r>
-            <P></P><P></P>
-        &copy; 2023 Restaurante Rosa Maria. Todos os direitos reservados.
-
+               <div class="product">
+                   <img src="BEBIDAS.jpg" alt="Produto 1">
+                   <div class="product-details">
+                       <h2>BEBIDAS</h2>
+                   
+                
+                   </div>
+               
+               </div>
+               </div>
+               <!-- Adicione mais produtos conforme necessário -->
        
-    </footer>
-</body>
-</html>
+           </div>
+               </a>
+               <a href="dodia.html">
+           <div class="container">
+           <div class="product">
+               <img src="PRATOS DO DIA.jpg" alt="Produto 1">
+               <div class="product-details">
+                   <h2>PRATOS DO DIA</h2>
+               
+                
+               </div>
+               </div>
+           </div>
+           </div>
+               </a>
+               <a href="cerveja.html
+               ">
+           <div class="container">
+           <div class="product">
+               <img src="CERVEJAS.jpg" alt="Produto 1">
+               <div class="product-details">
+                   <h2>CERVEJAS</h2>
+               
+                  
+                 
+               </div>
+       
+               </div>
+           </div>
+           </div>
+               </a>
+               <a href="drinks.html
+               ">
+           <div class="container">
+               <div class="product">
+                   <img src="DRINKS.jpg" alt="Produto 1">
+                   <div class="product-details">
+                       <h2>DRINKS</h2>
+                   
+                
+                   </div>
+           </div></div> </div>
+               </a>
+               <a href="porcoes.html
+               ">
+           
+           <div class="container">
+           <div class="product">
+               <img src="PORÇÕES.jpg" alt="Produto 1">
+               <div class="product-details">
+                   <h2>PORÇÕES</h2>
+               
+             
+               </div>
+               </div>
+           </div>
+               </div>
+               </div>
+       
+               </a>
+               <a href="whisky.html
+               ">
+               <div class="container">
+           <div class="product">
+               <img src="WHISKY.jpg" alt="Produto 1">
+               <div class="product-details">
+                   <h2>WHISKY'S</h2>
+               
+               </div>
+               </div>
+           
+           </div>
+               </div>  
+               
+               </div>
+               </a> <a href="caipirinha.html
+               ">
+               <div class="container">
+           <div class="product">
+               <img src="CAIPIRINHA.jpg" alt="Produto 1">
+               <div class="product-details">
+                   <h2>CAIPIRINHAS</h2>
+              
+               </div>
+               </div></div></div></div>
+           <a href="sobremesa.html ">
+                   <div class="container">
+           <div class="product">
+               <img src="sob.jpg" alt="Produto 1">
+               <div class="product-details">
+                   <h2>SOBREMESA</h2>
+                
+               </div> 
+               </div>
+           </a>
+               </div>
+               </div>
+               </div>
+              <a href="salgado.html ">
+                   <div class="container">
+           <div class="product">
+               <img src="salgado.jpg" alt="Produto 1">
+               <div class="product-details">
+                   <h2>SALGADOS</h2>
+                
+               </div> 
+             </div>
+              </a>
+               
+               </div>
+           
+           </div>
+               </div>
+               </a>
+           <div class="container">
+           <div class="product">
+               
+               <div class="product-details">
+                   <center><strong> <span class="highlight">COSTELA NO BAFO R$60,00</span></strong><p><span class="highlight">SERVISERVI-SE R$59.90 O KG</span> </strong></center>
+               </div>
+           </div>
+           </div>
+       <footer>
+       <h5>Acesse Nossas Redes Sociais<p>E faça seu pedido</p></h5>
+                <a href="https://wa.me/5511985403062?text=Ol%C3%A1%21+Gostaria+de+fazer+um+pedido. "> <img src="ZAP.png" alt="whatsapp" width="50px"></a>
+               
+               <r><r></r>  
+              <a href="https://www.instagram.com/rosamaria_restaurante/ ">  <img src="instagram.png" alt="instagram" width="50px"></a>
+                  <a href="https://www.ifood.com.br/delivery/sao-paulo-sp/rosa-maria-restaurante-carandiru/722eb1ec-0b73-4105-9841-894793f905bd?utm_medium=share">  
+                      <img src="ifood-logo.svg" alt="ifood" width="50px"></a>
+               <r></r>
+                   <P></P><P></P>
+               &copy; 2023 Restaurante Rosa Maria. Todos os direitos reservados.
+       
+              
+           </footer>
+       </body>
+       </html>
+       
